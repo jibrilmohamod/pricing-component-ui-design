@@ -10,6 +10,37 @@ html {
     box-sizing: border-box;
 }
 
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon {
+    display: none;
+}
+
+.mylinks {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+li a {
+    position: relative;
+    top: -10px;
+}
+
 body {
     height: 100%;
 }
@@ -42,8 +73,16 @@ article[class=three] {
     margin-left: 20px;
 } */
 
-article:hover {
+article[class="one"]:hover {
     border-color: #7B3BF3;
+}
+
+article[class="two"]:hover {
+    border-color: #25b4d8;
+}
+
+article[class="three"]:hover {
+    border-color: #14c71a;
 }
 
 hr {
@@ -72,7 +111,7 @@ p[class=top] {
     font-size: 14px;
 }
 
-a {
+.pur {
     min-width: 130px;
     height: 40px;
     color: #fff;
@@ -95,15 +134,15 @@ a {
     align-items: center;
 }
 
-a:hover {
+.pur:hover {
     color: #fff;
 }
 
-a:hover:after {
+.pur:hover:after {
     height: 100%;
 }
 
-a:after {
+.pur:after {
     content: "";
     position: absolute;
     z-index: -1;
@@ -113,6 +152,34 @@ a:after {
     height: 0;
     width: 100%;
     background: #7B3BF3;
+}
+
+article[class="two"] .pur {
+    border-color: #25b4d8;
+    color: #25b4d8;
+}
+
+article[class="two"] .pur:hover {
+    border-color: #25b4d8;
+    color: #fff;
+}
+
+article[class="two"] .pur:hover::after {
+    background-color: #25b4d8;
+}
+
+article[class="three"] .pur {
+    border-color: #14c71a;
+    color: #14c71a;
+}
+
+article[class="three"] .pur:hover {
+    border-color: #14c71a;
+    color: #fff;
+}
+
+article[class="three"] .pur:hover::after {
+    background-color: #14c71a;
 }
 
 @media screen and (min-width: 950px) {
@@ -141,9 +208,59 @@ a:after {
     article h1 {
         /* font-size: 24px; */
     }
-    a {
+    .pur {
         height: 20px;
         font-size: 14px;
         width: 50px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    section {
+        flex-direction: column;
+        height: auto;
+    }
+    article {
+        width: 90%;
+        height: auto;
+        border: 1px solid #212c4d;
+        height: auto;
+    }
+    /* Style the navigation menu */
+    .topnav {
+        overflow: hidden;
+        background-color: #212c4d;
+        position: relative;
+    }
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    .topnav .mylinks {
+        display: none;
+    }
+    /* Style navigation menu links */
+    .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+    /* Style the hamburger menu */
+    .topnav a.icon {
+        background: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    /* Add a grey background color on mouse-over */
+    .topnav a:hover {
+        background-color: #7B3BF3;
+        color: black;
+        z-index: 1;
+    }
+    /* Style the active link (or home/logo) */
+    .active {
+        background-color: #25b4d8;
+        color: white;
     }
 }

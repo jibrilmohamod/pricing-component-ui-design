@@ -6,17 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/efedea2d04.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
 
 <body>
+
+
+    <nav class="topnav">
+        <a href="" class="active">ParExellence Prints</a>
+        <ul class="mylinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+
     <section>
         <article class="one">
             <p class="top">BASIC</p>
             <h1>100GB</h1>
             <p>1 month, then $1.7/month</p>
-            <a href="">Purchase</a>
+            <a href="" class="pur">Purchase</a>
             <hr>
             <p>
                 <span> &#x2713; 100 GB storage</span>
@@ -24,11 +39,11 @@
                 <span> &#x2713; Extra member benefits</span>
             </p>
         </article>
-        <article>
+        <article class="two">
             <p class="top">STANDARD</p>
             <h1>200GB</h1>
             <p>1 month, then $2.9/month</p>
-            <a href="">Purchase</a>
+            <a href="" class="pur">Purchase</a>
             <hr>
             <p>
                 <span> &#x2713; 200 GB storage</span>
@@ -40,7 +55,7 @@
             <p class="top">PREMIUM</p>
             <h1>2TB</h1>
             <p>1 month, then $8.9/month</p>
-            <a href="">Purchase</a>
+            <a href="" class="pur">Purchase</a>
             <hr>
             <p>
                 <span> &#x2713; 2TB storage</span>
@@ -49,6 +64,16 @@
             </p>
         </article>
     </section>
+    <script>
+        function myFunction() {
+            var x = document.querySelector(".mylinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
 </body>
 
 </html>
