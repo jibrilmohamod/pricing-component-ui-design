@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500;600&display=swap');
 html {
     background-color: #1C243C;
     /* max-width: 1440px; */
     height: 100vh;
     color: #fff;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Spectral', sans-serif;
     font-size: 20px;
     text-decoration: none;
     box-sizing: border-box;
