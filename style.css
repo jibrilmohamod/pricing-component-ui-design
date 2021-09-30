@@ -13,6 +13,21 @@ html {
 nav {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #212c4d;
+    position: relative;
+    top: -5px;
+}
+
+.topnav a:hover {
+    background-color: #7B3BF3;
+    color: black;
+    z-index: 1;
+    border-radius: 10px;
 }
 
 .icon {
@@ -21,7 +36,6 @@ nav {
 
 .mylinks {
     display: flex;
-    justify-content: space-between;
 }
 
 ul {}
@@ -36,10 +50,11 @@ a {
     padding: 10px;
 }
 
-li a {
+
+/* li a {
     position: relative;
     top: -10px;
-}
+} */
 
 body {
     height: 100%;
@@ -62,6 +77,11 @@ article {
     border-radius: 15px;
     padding: 20px;
     height: 50%;
+}
+
+article:hover {
+    transform: scale(1.1);
+    transition: 1s;
 }
 
 
@@ -136,6 +156,7 @@ p[class=top] {
 
 .pur:hover {
     color: #fff;
+    transform: scale(1.1);
 }
 
 .pur:hover:after {
@@ -226,6 +247,12 @@ article[class="three"] .pur:hover::after {
         border: 1px solid #212c4d;
         height: auto;
     }
+    article:hover {
+        transform: unset;
+    }
+    .pur:hover {
+        transform: unset;
+    }
     /* Style the navigation menu */
     .topnav {
         overflow: hidden;
@@ -246,7 +273,7 @@ article[class="three"] .pur:hover::after {
     }
     /* Style the hamburger menu */
     .topnav a.icon {
-        background: black;
+        background: #212c4d;
         display: block;
         position: absolute;
         right: 0;
